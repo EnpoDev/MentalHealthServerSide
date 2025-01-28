@@ -1,0 +1,29 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Environment variables
+.env
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Air
+tmp/
+build-errors.log
+
+# Go specific
+vendor/
+go.work
+
+# OS specific
+.DS_Store
+Thumbs.db 

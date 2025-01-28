@@ -1,0 +1,87 @@
+Instructions for Developing Secure and Documented Code in Go (Golang)
+Hello AI, below are the detailed instructions for working with the Go (Golang) programming language. Your primary responsibilities include detecting and fixing security vulnerabilities proactively, automatically resolving them, and documenting all these actions in a comprehensive README.md file. Please follow these guidelines closely.
+
+1. Security-First Coding
+For every code you write in Go, you must identify potential security vulnerabilities and risks and automatically fix them. The process should include the following steps:
+
+Identify Security Vulnerabilities:
+
+Analyze your code for known security risks, such as:
+SQL Injection
+Cross-Site Scripting (XSS)
+Unsafe file handling
+Lack of input validation
+Exposed ports or leaked API keys
+Highlight any portion of the code that might introduce vulnerabilities.
+Automatic Security Fixes:
+
+When you detect a vulnerability, you must not only report it but also resolve it automatically. Examples include:
+Using prepared statements to prevent SQL Injection.
+Sanitizing user input to mitigate XSS attacks.
+Encrypting sensitive data using secure, modern encryption algorithms (e.g., via the crypto package).
+Refactor code to follow security best practices.
+Follow Up-to-Date Security Standards:
+
+Always adhere to the latest best practices for secure coding in Go, such as guidelines from OWASP Top 10 or community-recommended Go security practices.
+Avoid using deprecated methods or insecure practices, such as direct file access or hardcoded secrets.
+Test and Verify Security:
+
+Write automated tests to ensure that your security fixes work correctly.
+Run the code through static analysis tools to catch potential vulnerabilities (e.g., gosec).
+2. Document Every Step in README.md
+For every codebase you create, you must generate a README.md file. This file should explain the purpose of the project, the security measures taken, and any vulnerabilities fixed during development. The README file must include the following sections:
+
+Project Overview:
+
+Provide a clear description of the project's purpose, functionality, and design rationale.
+Security Measures:
+
+Document all detected vulnerabilities and how you resolved them.
+Examples of what to include:
+"This project uses prepared statements to prevent SQL Injection."
+"User input is sanitized to mitigate XSS attacks."
+Coding Standards:
+
+Describe the coding principles followed (e.g., Go coding standards, Clean Code practices).
+Dependencies and Tools:
+
+List any third-party libraries or tools used in the project.
+Explain why they were chosen, especially for security-related purposes (e.g., using jwt-go for secure token generation).
+Usage Instructions:
+
+Provide detailed steps for running the project, including setup and security considerations.
+Add notes on any configurations or environment variables necessary for security (e.g., database credentials).
+3. Development Workflow
+When developing a Go project, you must adhere to the following workflow:
+
+Follow Go Coding Conventions:
+
+Use tools like gofmt to ensure the code is properly formatted and adheres to Go's coding standards.
+Ensure the code is clean, readable, and maintainable.
+Write Tests:
+
+Write unit tests for all functions, especially those that handle sensitive operations (e.g., file handling, user input, or database queries).
+Create security-focused test cases to verify that no vulnerabilities are introduced.
+Optimize for Performance:
+
+Ensure that the application is not only secure but also optimized for performance.
+Use Go’s built-in concurrency features like goroutines and channels to improve efficiency.
+Manage Dependencies:
+
+Use Go's go mod for dependency management to ensure secure and consistent builds.
+Audit all external libraries to confirm they are safe and actively maintained.
+4. Example Workflow:
+Here’s an example of how you should handle a project:
+
+When initializing a project, analyze all potential entry points (e.g., http.ListenAndServe for an HTTP server).
+Check for unsafe endpoints, unvalidated input, or hardcoded sensitive information.
+If a vulnerability is detected (e.g., hardcoded credentials), replace them with a secure alternative:
+Use environment variables to store sensitive information securely.
+Document the changes in the README.md file as follows:
+“Hardcoded credentials have been replaced with environment variables to enhance security.”
+5. Summary
+To summarize, your tasks include:
+
+Proactively identifying and fixing vulnerabilities in Go code.
+Automatically resolving security issues and adhering to best practices.
+Creating a detailed README.md file for every project to document your actions, rationale, and coding principles.
